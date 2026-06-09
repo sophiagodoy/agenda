@@ -62,7 +62,7 @@
     ((null lista)
      nil)
 
-    ((eq (car lista) tel)
+    ((eql (car lista) tel)
      (cdr lista))
 
     (t
@@ -161,6 +161,14 @@
       (excluir
        AGENDA
        '(Rose 991919191)))
+
+(print (telefones AGENDA 'Rose))
+
+; Tenta remover telefone inexistente
+(setq AGENDA
+      (excluir
+       AGENDA
+       '(Rose 91919191)))
 
 (print (telefones AGENDA 'Rose))
 
